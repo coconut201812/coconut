@@ -1,0 +1,402 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA2BF9B4217DCB1F0061103F /* epida_prng.c in Sources */ = {isa = PBXBuildFile; fileRef = AA2BF9AD217DCB1F0061103F /* epida_prng.c */; };
+		AA2BF9B5217DCB1F0061103F /* epida_joinreq.c in Sources */ = {isa = PBXBuildFile; fileRef = AA2BF9AE217DCB1F0061103F /* epida_joinreq.c */; };
+		AA2BF9B6217DCB1F0061103F /* epida_entropy.c in Sources */ = {isa = PBXBuildFile; fileRef = AA2BF9AF217DCB1F0061103F /* epida_entropy.c */; };
+		AA2BF9B7217DCB1F0061103F /* epida_crypt.c in Sources */ = {isa = PBXBuildFile; fileRef = AA2BF9B0217DCB1F0061103F /* epida_crypt.c */; };
+		AA2BF9B8217DCB1F0061103F /* epida_genprvkey.c in Sources */ = {isa = PBXBuildFile; fileRef = AA2BF9B1217DCB1F0061103F /* epida_genprvkey.c */; };
+		AA2BF9B9217DCB1F0061103F /* epida_signmsg.c in Sources */ = {isa = PBXBuildFile; fileRef = AA2BF9B2217DCB1F0061103F /* epida_signmsg.c */; };
+		AA2BF9BA217DCB1F0061103F /* epida_sign.c in Sources */ = {isa = PBXBuildFile; fileRef = AA2BF9B3217DCB1F0061103F /* epida_sign.c */; };
+		AA2BF9E2217DEE680061103F /* bufutil.c in Sources */ = {isa = PBXBuildFile; fileRef = AA2BF9DE217DEE680061103F /* bufutil.c */; };
+		AA2BFA64218020420061103F /* epida_loadprefiles.c in Sources */ = {isa = PBXBuildFile; fileRef = AA2BFA63218020420061103F /* epida_loadprefiles.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AA2BF999217DCABF0061103F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		AA2BF99B217DCABF0061103F /* libsignMsg.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libsignMsg.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA2BF9A8217DCB1F0061103F /* epida_crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = epida_crypt.h; sourceTree = "<group>"; };
+		AA2BF9A9217DCB1F0061103F /* epida_signmsg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = epida_signmsg.h; sourceTree = "<group>"; };
+		AA2BF9AA217DCB1F0061103F /* epida_prng.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = epida_prng.h; sourceTree = "<group>"; };
+		AA2BF9AB217DCB1F0061103F /* epida_entropy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = epida_entropy.h; sourceTree = "<group>"; };
+		AA2BF9AD217DCB1F0061103F /* epida_prng.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = epida_prng.c; sourceTree = "<group>"; };
+		AA2BF9AE217DCB1F0061103F /* epida_joinreq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = epida_joinreq.c; sourceTree = "<group>"; };
+		AA2BF9AF217DCB1F0061103F /* epida_entropy.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = epida_entropy.c; sourceTree = "<group>"; };
+		AA2BF9B0217DCB1F0061103F /* epida_crypt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = epida_crypt.c; sourceTree = "<group>"; };
+		AA2BF9B1217DCB1F0061103F /* epida_genprvkey.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = epida_genprvkey.c; sourceTree = "<group>"; };
+		AA2BF9B2217DCB1F0061103F /* epida_signmsg.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = epida_signmsg.c; sourceTree = "<group>"; };
+		AA2BF9B3217DCB1F0061103F /* epida_sign.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = epida_sign.c; sourceTree = "<group>"; };
+		AA2BF9D3217DCC440061103F /* epida_define.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = epida_define.h; sourceTree = "<group>"; };
+		AA2BF9D6217DEE680061103F /* buffutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buffutil.h; sourceTree = "<group>"; };
+		AA2BF9DE217DEE680061103F /* bufutil.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bufutil.c; sourceTree = "<group>"; };
+		AA2BFA63218020420061103F /* epida_loadprefiles.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = epida_loadprefiles.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA2BF998217DCABF0061103F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AA2BF992217DCABF0061103F = {
+			isa = PBXGroup;
+			children = (
+				AA2BF99D217DCABF0061103F /* signMsg */,
+				AA2BF99C217DCABF0061103F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AA2BF99C217DCABF0061103F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA2BF99B217DCABF0061103F /* libsignMsg.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA2BF99D217DCABF0061103F /* signMsg */ = {
+			isa = PBXGroup;
+			children = (
+				AA2BF9D4217DEE680061103F /* util */,
+				AA2BF9D2217DCC440061103F /* include */,
+				AA2BF9A7217DCB1F0061103F /* sigmsg */,
+			);
+			path = signMsg;
+			sourceTree = "<group>";
+		};
+		AA2BF9A7217DCB1F0061103F /* sigmsg */ = {
+			isa = PBXGroup;
+			children = (
+				AA2BF9A8217DCB1F0061103F /* epida_crypt.h */,
+				AA2BF9A9217DCB1F0061103F /* epida_signmsg.h */,
+				AA2BF9AA217DCB1F0061103F /* epida_prng.h */,
+				AA2BF9AB217DCB1F0061103F /* epida_entropy.h */,
+				AA2BF9AC217DCB1F0061103F /* src */,
+			);
+			name = sigmsg;
+			path = ../../../src/sigmsg;
+			sourceTree = "<group>";
+		};
+		AA2BF9AC217DCB1F0061103F /* src */ = {
+			isa = PBXGroup;
+			children = (
+				AA2BFA63218020420061103F /* epida_loadprefiles.c */,
+				AA2BF9AD217DCB1F0061103F /* epida_prng.c */,
+				AA2BF9AE217DCB1F0061103F /* epida_joinreq.c */,
+				AA2BF9AF217DCB1F0061103F /* epida_entropy.c */,
+				AA2BF9B0217DCB1F0061103F /* epida_crypt.c */,
+				AA2BF9B1217DCB1F0061103F /* epida_genprvkey.c */,
+				AA2BF9B2217DCB1F0061103F /* epida_signmsg.c */,
+				AA2BF9B3217DCB1F0061103F /* epida_sign.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		AA2BF9D2217DCC440061103F /* include */ = {
+			isa = PBXGroup;
+			children = (
+				AA2BF9D3217DCC440061103F /* epida_define.h */,
+			);
+			name = include;
+			path = ../../../src/include;
+			sourceTree = "<group>";
+		};
+		AA2BF9D4217DEE680061103F /* util */ = {
+			isa = PBXGroup;
+			children = (
+				AA2BF9D6217DEE680061103F /* buffutil.h */,
+				AA2BF9DA217DEE680061103F /* src */,
+			);
+			name = util;
+			path = ../../../src/util;
+			sourceTree = "<group>";
+		};
+		AA2BF9DA217DEE680061103F /* src */ = {
+			isa = PBXGroup;
+			children = (
+				AA2BF9DE217DEE680061103F /* bufutil.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA2BF99A217DCABF0061103F /* signMsg */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA2BF9A4217DCABF0061103F /* Build configuration list for PBXNativeTarget "signMsg" */;
+			buildPhases = (
+				AA2BF997217DCABF0061103F /* Sources */,
+				AA2BF998217DCABF0061103F /* Frameworks */,
+				AA2BF999217DCABF0061103F /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = signMsg;
+			productName = signMsg;
+			productReference = AA2BF99B217DCABF0061103F /* libsignMsg.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA2BF993217DCABF0061103F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				TargetAttributes = {
+					AA2BF99A217DCABF0061103F = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = AA2BF996217DCABF0061103F /* Build configuration list for PBXProject "signMsg" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AA2BF992217DCABF0061103F;
+			productRefGroup = AA2BF99C217DCABF0061103F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA2BF99A217DCABF0061103F /* signMsg */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA2BF997217DCABF0061103F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA2BF9B6217DCB1F0061103F /* epida_entropy.c in Sources */,
+				AA2BF9B5217DCB1F0061103F /* epida_joinreq.c in Sources */,
+				AA2BF9E2217DEE680061103F /* bufutil.c in Sources */,
+				AA2BFA64218020420061103F /* epida_loadprefiles.c in Sources */,
+				AA2BF9B8217DCB1F0061103F /* epida_genprvkey.c in Sources */,
+				AA2BF9B7217DCB1F0061103F /* epida_crypt.c in Sources */,
+				AA2BF9BA217DCB1F0061103F /* epida_sign.c in Sources */,
+				AA2BF9B9217DCB1F0061103F /* epida_signmsg.c in Sources */,
+				AA2BF9B4217DCB1F0061103F /* epida_prng.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AA2BF9A2217DCABF0061103F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AA2BF9A3217DCABF0061103F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AA2BF9A5217DCABF0061103F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NDEBUG,
+					_IPP_v50_,
+					_IPP_DEBUG,
+					_DISABLE_ALG_MD5_,
+					_DISABLE_ALG_SM3_,
+					TINY,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../src",
+					"$(SRCROOT)/../../libs/epid/include",
+					"$(SRCROOT)/../../libs/openssl/include/openssl-$(CURRENT_ARCH)",
+				);
+			};
+			name = Debug;
+		};
+		AA2BF9A6217DCABF0061103F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					NDEBUG,
+					_IPP_v50_,
+					_IPP_DEBUG,
+					_DISABLE_ALG_MD5_,
+					_DISABLE_ALG_SM3_,
+					TINY,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../src",
+					"$(SRCROOT)/../../libs/epid/include",
+					"$(SRCROOT)/../../libs/openssl/include/openssl-$(CURRENT_ARCH)",
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA2BF996217DCABF0061103F /* Build configuration list for PBXProject "signMsg" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA2BF9A2217DCABF0061103F /* Debug */,
+				AA2BF9A3217DCABF0061103F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA2BF9A4217DCABF0061103F /* Build configuration list for PBXNativeTarget "signMsg" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA2BF9A5217DCABF0061103F /* Debug */,
+				AA2BF9A6217DCABF0061103F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AA2BF993217DCABF0061103F /* Project object */;
+}

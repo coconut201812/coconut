@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "8412cf36-d473-4123-b020-b02595d80963",
+		"name": "transaction",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "transaction request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"verifier\":\"verifier\",\n\"txData\":{\"signature\":\"JGw2aWcFjgW3MLhxC1mIak0DY1CQfqsAYoSdRmtyxQJbYi2MrF3Bpvdf2+fQe0SQakZbjow9LOrx3jKiUb1H8sub9pL+DPVTwOV2p+t37uvppFjii2v3zrpBiGrJ4Q3RIilMxaQ5LZe0sB5o1O3acKgCUqzXTUa92cLzHeCx8IghiiE+FkXOWI0aqfQUoARDl1/wgdCCwmGuuYr0veC58vCE8WHoLfvFe2HqB+/FCd6aCgrJBHRLg6fzbfmOV4VHAwhDaDA/A9MHtuVYSgH2yKC6scT8rbX/FLlnjupDXPOVUm3TW/rrrkksyv+WqmS+cAYlAa67rj0rpH/09buY1oM9NCqxFsqPlD1i9nZTsHo394TQLwYOVrkl2Sm0CJL0F8e6kdo1kPWQjc4I7yaOk5Fm/aKcx12v9PktgOyf4XPOXIBQXEA/DI7bvgk4gBxvSgJ44qc8VA8qzMd8kGujmgAAAAAAAAAA\",\"basename\":\"1\", \"msg\":\"CgsMDQ4P\",\"groupId\":\"1\"\n}\n}\n"
+				},
+				"url": {
+					"raw": "https://www.coconut.com:8443/coconut/txRequest",
+					"protocol": "https",
+					"host": [
+						"www",
+						"coconut",
+						"com"
+					],
+					"port": "8443",
+					"path": [
+						"coconut",
+						"txRequest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get BusinessInfo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://www.coconut.com:8443/coconut/getBusinessInfo",
+					"protocol": "https",
+					"host": [
+						"www",
+						"coconut",
+						"com"
+					],
+					"port": "8443",
+					"path": [
+						"coconut",
+						"getBusinessInfo"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<Configuration status="OFF" monitorInterval="1800">
+    <properties>
+        <property name="LOG_HOME">WebAppLogs/backend</property>
+        <property name="FILE_NAME_LOG">mylog</property>
+        <property name="FILE_NAME_ERR">myerr</property>
+    </properties>
+
+
+    <Appenders>
+        <Console name="console_out_appender" target="SYSTEM_OUT">
+            <Filters>
+            	<ThresholdFilter level="info" onMatch="DENY" onMismatch="NEUTRAL"/> 
+            	<ThresholdFilter level="trace" onMatch="ACCEPT" onMismatch="DENY" />
+            </Filters>
+            <PatternLayout pattern="%date{yyyy-MM-dd HH:mm:ss.SSS} %level [%thread][%file:%line] - %msg%n" />
+        </Console>
+        
+        <RollingFile name="running-log" fileName="${LOG_HOME}/${FILE_NAME_LOG}.log"
+            filePattern="${LOG_HOME}/$${date:yyyy-MM}/${FILE_NAME_LOG}-%d{yyyy-MM-dd}-%i.log.gz"
+            immediateFlush="true" append="true">
+            <Filters>
+            	<ThresholdFilter level="error" onMatch="DENY" onMismatch="NEUTRAL"/> 
+                <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY" />
+            </Filters>
+            <PatternLayout
+                pattern="%date{yyyy-MM-dd HH:mm:ss.SSS} %level [%thread][%file:%line] - %msg%n" />
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+                <SizeBasedTriggeringPolicy size="10 MB" />
+            </Policies>
+            <DefaultRolloverStrategy max="20" />
+        </RollingFile>
+        
+        <RollingFile name="running-error" fileName="${LOG_HOME}/${FILE_NAME_ERR}.log"
+            filePattern="${LOG_HOME}/$${date:yyyy-MM}/${FILE_NAME_ERR}-%d{yyyy-MM-dd}-%i.log.gz"
+            immediateFlush="true" append="true">
+            <Filters>
+                <ThresholdFilter level="error" onMatch="ACCEPT" onMismatch="DENY" />
+            </Filters>
+            <PatternLayout
+                pattern="%date{yyyy-MM-dd HH:mm:ss.SSS} %level [%thread][%file:%line] - %msg%n" />
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+                <SizeBasedTriggeringPolicy size="10 MB" />
+            </Policies>
+            <DefaultRolloverStrategy max="20" />
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <root level="trace">
+        	<appender-ref ref="console_out_appender" />
+            <appender-ref ref="running-log"/>
+            <appender-ref ref="running-error"/>
+        </root>
+        
+    </Loggers>
+</Configuration>

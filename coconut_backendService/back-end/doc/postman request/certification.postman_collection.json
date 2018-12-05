@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "2af32cb7-11fd-430c-9bf9-efe03ec3cadc",
+		"name": "certification",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "certificationRequestStep1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"kyc\" : \"jumio\"\n}"
+				},
+				"url": {
+					"raw": "https://www.coconut.com:8443/coconut/certificationRequestStep1",
+					"protocol": "https",
+					"host": [
+						"www",
+						"coconut",
+						"com"
+					],
+					"port": "8443",
+					"path": [
+						"coconut",
+						"certificationRequestStep1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "certificationRequestStep2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"joinRequest\":\"123123123\"\n}"
+				},
+				"url": {
+					"raw": "https://www.coconut.com:8443/coconut/certificationRequestStep2",
+					"protocol": "https",
+					"host": [
+						"www",
+						"coconut",
+						"com"
+					],
+					"port": "8443",
+					"path": [
+						"coconut",
+						"certificationRequestStep2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get basename",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://www.coconut.com:8443/coconut/getBasename",
+					"protocol": "https",
+					"host": [
+						"www",
+						"coconut",
+						"com"
+					],
+					"port": "8443",
+					"path": [
+						"coconut",
+						"getBasename"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get verifiers pub keys",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"verifier\" : \"verifier\"\n}"
+				},
+				"url": {
+					"raw": "https://www.coconut.com:8443/coconut/getVerifierPublicKey",
+					"protocol": "https",
+					"host": [
+						"www",
+						"coconut",
+						"com"
+					],
+					"port": "8443",
+					"path": [
+						"coconut",
+						"getVerifierPublicKey"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sign all signature",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"kyc\":\"EXAMPLE\",\n\"signatures\":[\"12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234512345\",\n\t\t\t\"lO4Nik+LEc7z0H2VeoRhHwrjo2Qxa6ps3QU2Vj/ef8CG69MKtM20DYlhsZ2qEKttFHT+CD4+sw9XBM+4h9Mi4E2d/hWnEsIi9KGMVPmvCVKEaTmwVtfec6Yl5xg430YoOe19wGyeOq1cVyQzmRhN3j6PMv9KEepOCvKj0GEMZY0x6AX0kvI0DcCd/AXlqQ2Wt/unHiTJDgQNSzbKaNy24mqRpiPTm3NPvIGg9xfBm74fH5tFfj/nHtWTcY7WjyF4JsM5T1egSDSM1FF+JHtwBQDA9OguRvQxJtdsGpXrz76Lc6w761+9wIH3Xq8EbTXmmYGPHeax3S31MRQz1gPUMuEM9lEPVHfdHHMkV8QRpbiXeOR2YbCNB2FCVw3gPSV1sR5RuvX6xWXU0FsKwfQBZ/uxVRW84m/0P35FYus/WPrguULRUKD+Rj8jYxL2azHG4Wa2xd9J/WWW6fZ19Rq/ngAAAAAAAAAA\",\n\t\t\t\"22345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234512345\",\n\t\t\t\"32345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234512345\",\n\t\t\t\"42345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234512345\",\n\t\t\t\"52345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234512345\",\n\t\t\t\"62345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234512345\",\n\t\t\t\"72345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234512345\",\n\t\t\t\"82345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234512345\",\n\t\t\t\"92345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234512345\"]\n}"
+				},
+				"url": {
+					"raw": "https://www.coconut.com:8443/coconut/signAllBasenames",
+					"protocol": "https",
+					"host": [
+						"www",
+						"coconut",
+						"com"
+					],
+					"port": "8443",
+					"path": [
+						"coconut",
+						"signAllBasenames"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "certification revoke",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"kyc\" : \"jumio\"\n}"
+				},
+				"url": {
+					"raw": "https://www.coconut.com:8443/coconut/userRevoke",
+					"protocol": "https",
+					"host": [
+						"www",
+						"coconut",
+						"com"
+					],
+					"port": "8443",
+					"path": [
+						"coconut",
+						"userRevoke"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

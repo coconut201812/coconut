@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:aop="http://www.springframework.org/schema/aop" 
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd 
+        http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd 
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd 
+        http://www.springframework.org/schema/aop 
+        http://www.springframework.org/schema/aop/spring-aop.xsd 
+        http://www.springframework.org/schema/tx 
+        http://www.springframework.org/schema/tx/spring-tx.xsd ">
+    	
+    <context:component-scan base-package="coconut.svcsdk.common,coconut.svcsdk.epid,coconut.svcsdk.kyc,coconut.svcsdk.mapper,coconut.svcsdk.transaction"/>
+    
+    <aop:aspectj-autoproxy />
+    
+    <bean class="coconut.svcsdk.common.GlobalExceptionResolver" />
+    
+    <context:property-placeholder location="classpath:datasource.properties"/>
+	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close"> 
+	    <property name="url" value="${db.url}" />  
+	    <property name="username" value="${db.username}" />  
+	    <property name="password" value="${db.password}" />  
+	    <property name="driverClassName" value="${db.driverClassName}" />  
+	    
+	    <property name="initialSize" value="${db.initConnectCount}" />  
+	    <property name="minIdle" value="${db.minConnectCount}" />   
+	    <property name="maxActive" value="${db.maxConnectCount}" /> 
+	    
+	    <property name="maxWait" value="60000" />  
+	    <property name="timeBetweenEvictionRunsMillis" value="60000" />  
+	    <property name="minEvictableIdleTimeMillis" value="300000" />  
+	    
+	    <property name="validationQuery" value="SELECT 'x'" />  
+	    <property name="testWhileIdle" value="false" />  
+	    <property name="testOnBorrow" value="false" />  
+	    <property name="testOnReturn" value="false" />  
+	   
+	    <property name="poolPreparedStatements" value="false" />  
+	    <property name="maxPoolPreparedStatementPerConnectionSize" value="-1" />  
+	    <property name="defaultAutoCommit" value="true" />
+	    
+	    <property name="filters" value="stat,wall" />
+	</bean>
+	
+	<bean id="stat-filter" class="com.alibaba.druid.filter.stat.StatFilter">
+        <property name="mergeSql" value="true"/>
+        <property name="slowSqlMillis" value="500"/>
+    </bean>
+    
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	
+	<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate" destroy-method="close" scope="prototype"> 
+        <constructor-arg index="0" ref="sqlSessionFactory" /> 
+    </bean>
+    
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="coconut.svcsdk.mapper" />
+		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
+	</bean>
+	
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+
+    <tx:annotation-driven transaction-manager="transactionManager" />
+
+</beans>
+

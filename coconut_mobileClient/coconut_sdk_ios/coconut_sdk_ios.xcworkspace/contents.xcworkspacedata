@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:build/ios_signMsg_demo/ios_signMsg_demo.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:build/CoconutMcSDK/CoconutMcSDK.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:build/signMsg/signMsg.xcodeproj">
+   </FileRef>
+</Workspace>
